@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<title>t_dialog</title>
+
+<style>
+	.t_dialog_test{padding:20px;}
+</style>
+</head>
+<body>
+
+<div class="t_dialog_test">
+	<ul>
+		<li>t_dialog.dialog({title:'提示信息', content:"提示内容"})<br/><button id='test01'>提示信息</button><br/><br/></li>
+		<li>t_dialog.dialog({title:'html提示框', content:"测试：&lt;input type='text' name='test' style='width:200px'&gt;"})<br/><button id='test02'>html提示框</button><br/><br/></li>
+		<li>t_dialog.dialog({title:'提示栏', content:"这是内容", hint: '这是提示栏'})<br/><button id='test03'>提示栏</button><br/><br/></li>
+		<li>t_dialog.dialog({title:'确定按钮值修改', content:"提示信息", okVal:'改成保存'})<br/><button id='test04'>确定按钮值修改</button><br/><br/></li>
+		<li>t_dialog.dialog({title:'提示信息', content:"提示信息提示信息", ok: function(){alert('确定回调函数')})<br/><button id='test05'>确定回调函数</button><br/><br/></li>
+		<li>t_dialog.dialog({title:'取消按钮', content:"取消按钮", cancelVal: '取消'})<br/><button id='test06'>取消按钮</button><br/><br/></li>
+		<li>t_dialog.dialog({title:'取消按钮回调', content:"取消按钮回调", cancelVal: '取消', cancel: function(){alert('取消按钮回调');}})<br/><button id='test07'>取消按钮回调</button><br/><br/></li>
+		<li>t_dialog.dialog({title:'回调', content:"取消按钮回调",okVal:'确定回调', cancelVal: '取消回调', cancel: function(){alert('取消按钮回调');}, ok: function() {alert('确定回调事件');},})<br/><button id='test08'>两种回调</button><br/><br/></li>
+	</ul>
+</div>
+
+
+</body>
+
+<script src="../js/jquery-1.10.2.js"></script>
+<script src="../js/t_dialog.min.js"></script>
+<link rel="stylesheet" href="../css/t_dialog_style.css" />
+
+<script>
+	$(function(){
+		$('#test01').click(function(){
+			t_dialog.dialog({title:'提示信息', content:"提示内容"});
+		});
+
+		$('#test02').click(function(){
+			t_dialog.dialog({title:'html提示框', content:"测试：<input type='text' name='test' style='width:200px'>"});
+		});
+
+		$('#test03').click(function(){
+			t_dialog.dialog({title:'提示栏', content:"这是内容", hint: '这是提示栏'});
+		});
+
+		$('#test04').click(function(){
+			t_dialog.dialog({title:'确定按钮值修改', content:"提示信息", okVal:'改成保存'});
+		});
+
+		$('#test05').click(function(){
+			t_dialog.dialog({title:'确定回调函数', content:"确定回调函数", ok: function(){alert('确定回调函数');}});
+		});
+
+		$('#test06').click(function(){
+			t_dialog.dialog({title:'取消按钮', content:"取消按钮", cancelVal: '取消'});
+		});
+
+		$('#test07').click(function(){
+			t_dialog.dialog({title:'取消按钮回调', content:"取消按钮回调", cancelVal: '取消', cancel: function(){alert('取消按钮回调');}});
+		});
+
+		$('#test08').click(function(){
+			t_dialog.dialog({title:'回调', content:"取消按钮回调",okVal:'确定回调', cancelVal: '取消回调', cancel: function(){alert('取消按钮回调');}, ok: function() {alert('确定回调事件');},});
+		});
+	});
+</script>
+</html>
