@@ -23,8 +23,9 @@
 		<li>t_dialog.dialog({title:'取消按钮回调', content:"取消按钮回调", cancelVal: '取消', cancel: function(){alert('取消按钮回调');}})<br/><button id='test07'>取消按钮回调</button><br/><br/></li>
 		<li>t_dialog.dialog({title:'回调', content:"取消按钮回调",okVal:'确定回调', cancelVal: '取消回调', cancel: function(){alert('取消按钮回调');}, ok: function() {alert('确定回调事件');},})<br/><button id='test08'>两种回调</button><br/><br/></li>
 
+		<li>t_dialog.dialog({title:'控制位置', content:"通过top,left属性控制", top:"5%", left:"0%"})<br/><button id='test09'>位置控制</button><br/><br/></li>
 
-		<li><button id='test09'>同时调用</button><br/><br/></li>
+		<li><button id='test10'>同时调用</button><br/><br/></li>
 	</ul>
 </div>
 
@@ -70,6 +71,10 @@
 		});
 
 		$('#test09').click(function(){
+			t_dialog.dialog({title:'控制位置', content:"通过top,left属性控制", top:"5%", left:"0%"});
+		});
+
+		$('#test10').click(function(){
 			t_dialog.dialog({title:'对话框一', content:"对话框一 <button onclick='two()'>对话框二</button>", ok: function() {alert('对话框一回调事件');},});
 		});
 

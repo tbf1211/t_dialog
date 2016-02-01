@@ -2,17 +2,16 @@
 	var t_dialog = {
 		//获取dialog
 		getDialog: function () {
-			var dialog = '';
-			dialog += '<div class="t_dialog_black" style="z-index:' + this.dialog_index + '"></div>';
-			dialog += '  <div class="t_dialog_box" style="top:'+this.options.top+' ;left:'+this.options.left+' ;z-index:' + (this.dialog_index + 1) + '">';
-			dialog += '    <div class="t_dialog_title">提示</div>';
-			dialog += '    <div class="t_dialog_body">';
-			dialog += '      <div class="t_dialog_buttons">';
-			dialog += '        <a href="#" class="t_dialog_button t_dialog_ok" onclick="t_dialog.ok(this)">保存</a>';
-			dialog += '      </div>';
-			dialog += '      <a class="t_dialog_close" href="javascript:void(0)" onclick="t_dialog.close(this)"></a>';
-			dialog += '    </div>';
-			dialog += '  </div>';
+			var dialog = '<div class="t_dialog_black" style="z-index:' + this.dialog_index + '"></div>'
+				+'  <div class="t_dialog_box" style="top:'+this.options.top+' ;left:'+this.options.left+' ;z-index:' + (this.dialog_index + 1) + '">'
+				+'    <div class="t_dialog_title">提示</div>'
+				+'    <div class="t_dialog_body">'
+				+'      <div class="t_dialog_buttons">'
+				+'        <a href="#" class="t_dialog_button t_dialog_ok" onclick="t_dialog.ok(this)">保存</a>'
+				+'      </div>'
+				+'      <a class="t_dialog_close" href="javascript:void(0)" onclick="t_dialog.close(this)"></a>'
+				+'    </div>'
+				+'  </div>';
 
 			return dialog;
 		},
