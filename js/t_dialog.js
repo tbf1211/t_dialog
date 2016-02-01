@@ -1,3 +1,4 @@
+/* 简单 对话框*/
 (function (window, $){
 	var t_dialog = {
 		//获取dialog
